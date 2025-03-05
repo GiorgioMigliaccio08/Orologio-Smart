@@ -5,23 +5,51 @@
 }
 
 body {
-  font-family: "Roboto", monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 4vmin;
   min-height: 100vh;
   display: grid;
-  overflow: hidden;
   place-items: center;
+  overflow: hidden;
   background: linear-gradient(-45deg, #c4d2ef, #dfe6f6);
+}
+
+.clock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10vmin;
+  position: relative;
+  padding: 4vmin;
+  align-items: center; /* Allinea le colonne tra loro */
 }
 
 .ore,
 .minuti,
 .secondi {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4vmin;
+  align-items: center; /* Assicura l'allineamento verticale */
+}
+
+.strip {
+  transition: transform 500ms ease-in-out;
+  border-radius: 1.333vmin;
+  background-color: #dfe6f6;
+  box-shadow: -1vmin -1vmin 2vmin -0.5vmin #f9fbfd, 1vmin 1vmin 2vmin #a9bee8;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra i numeri all'interno della strip */
+  justify-content: center;
+}
+
+.number {
   user-select: none;
   width: 8vmin;
   height: 8vmin;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #f9fbfd;
   transition: all 500ms 100ms ease;
   border-radius: 50%;
@@ -33,20 +61,4 @@ body {
   transform: scale(1.3);
   background-color: #dfe6f6;
   box-shadow: -1vmin -1vmin 2vmin -0.5vmin #f9fbfd, 1vmin 1vmin 2vmin #a9bee8;
-}
-
-.strip {
-  transition: transform 500ms ease-in-out;
-  border-radius: 1.33333333333vmin;
-  background-color: #dfe6f6;
-  box-shadow: -1vmin -1vmin 2vmin -0.5vmin #f9fbfd, 1vmin 1vmin 2vmin #a9bee8;
-}
-
-.clock {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 8vmin;
-  height: 4vmin;
-  position: relative;
-  padding: 0 4vmin;
 }
