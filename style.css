@@ -3,70 +3,34 @@
   padding: 0;
   margin: 0;
 }
-
-p {
-  font-family: "Roboto Mono", monospace;
-  text-align: center;
-  font-size: 2vmin;
-  color: #3e6ccb;
-  padding: 1vmin 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: #f1f1f1;
-}
-
 body {
   font-family: "Roboto Mono", monospace;
   font-size: 4vmin;
   min-height: 100vh;
   display: grid;
-  place-items: center;
   overflow: hidden;
+  place-items: center;
   background: linear-gradient(-45deg, #c4d2ef, #dfe6f6);
 }
-
-.clock {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10vmin;
-  position: relative;
-  padding: 4vmin;
-  align-items: center;
-}
-
 .ore,
 .minuti,
 .secondi {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4vmin;
-  align-items: center;
+  grid-row: 1/2;
+  align-items: start;
 }
-
-.strip {
-  transition: transform 500ms ease-in-out;
-  border-radius: 1.333vmin;
-  background-color: #dfe6f6;
-  box-shadow: -1vmin -1vmin 2vmin -0.5vmin #f9fbfd, 1vmin 1vmin 2vmin #a9bee8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .number {
   user-select: none;
   width: 8vmin;
   height: 8vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   color: #f9fbfd;
   transition: all 500ms 100ms ease;
   border-radius: 50%;
 }
-
 .number.pop {
   color: #3e6ccb;
   font-weight: bold;
@@ -74,12 +38,23 @@ body {
   background-color: #dfe6f6;
   box-shadow: -1vmin -1vmin 2vmin -0.5vmin #f9fbfd, 1vmin 1vmin 2vmin #a9bee8;
 }
-
-/*Footer*/
+.strip {
+  transition: transform 500ms ease-in-out;
+  border-radius: 1.333333333333333vmin;
+  background-color: #dfe6f6;
+  box-shadow: -1vmin -1vmin 2vmin -0.5vmin #f9fbfd, 1vmin 1vmin 2vmin #a9bee8;
+}
+.clock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8vmin;
+  height: 4vmin;
+  position: relative;
+  padding: 0 4vmin;
+}
 
 footer {
   font-family: "Roboto Mono", monospace;
-  text-align: center;
   font-size: 2vmin;
   color: #3e6ccb;
   padding: 2vmin 0;
@@ -87,6 +62,7 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #f1f1f1;
+  text-align: center;
 }
 
 #year {
