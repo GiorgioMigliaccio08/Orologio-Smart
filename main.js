@@ -1,5 +1,5 @@
 const strips = [...document.querySelectorAll(".strip")];
-const numberSize = "8";
+const numberSize = "10";
 
 function highlight(strip, d) {
   strips[strip]
