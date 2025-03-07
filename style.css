@@ -73,10 +73,3 @@ footer {
 #year {
   font-weight: bold;
 }
-
-.icons i {
-  position: absolute;
-  bottom: 0;
-  color: black;
-  width: 300px;
-}
